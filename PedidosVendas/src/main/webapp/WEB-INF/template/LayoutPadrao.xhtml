@@ -14,19 +14,46 @@
 </h:head>
 
 <h:body>
-
+	<p:ajaxStatus styleClass="ajax-status" onsuccess="configurarMoeda()">
+		<f:facet name="start">
+			<h:graphicImage library="img" name="carregando.gif"
+				style="width: 35px;
+	height: 35px" />
+		</f:facet>
+		<f:facet name="complete">
+			<h:outputText value="" />
+		</f:facet>
+	</p:ajaxStatus>
 	<header>
 	<div>
 		<h:link>
-		 <h:graphicImage library="img" name="pedido.png" width="50" height="50"/>
+			<h:graphicImage library="img" name="pedido.png" width="50"
+				height="50" />
 		</h:link>
 	</div>
 	</header>
 	<div id="conteudo">
 		<ui:insert name="corpo" />
 	</div>
-	<p:separator style="margin-top:20px"/>
-	<footer> <h2>Sistema desenvolvido pela TriploWeb</h2> </footer>
+	<p:separator style="margin-top:20px" />
+	<footer>
+	Sistema desenvolvido pela TriploWeb - 
+	<a href="http://bit.ly/Y8saFl" target="_blank">www.triploweb.com.br</a>
+	</footer>
+
+	<script>
+		function configurarMoeda() {
+			$(".moeda").maskMoney({
+				decimal : ",",
+				thousands : ".",
+				allowZero : true
+			});
+		}
+
+		$(document).ready(function() {
+			configurarMoeda();
+		});
+	</script>
 </h:body>
 
 
