@@ -5,6 +5,9 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/webapp"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/scr/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/scr/test/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/scr/main/resources"/>
         <property name="context-root" value="PedidosVendas"/>
         <property name="java-output-path" value="/PedidosVendas/target/classes"/>
     </wb-module>
