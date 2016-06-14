@@ -25,21 +25,42 @@
 		</f:facet>
 	</p:ajaxStatus>
 	<header>
-	<div>
+	<div style="float: left">
 		<h:link>
 			<h:graphicImage library="img" name="pedido.png" width="50"
 				height="50" />
 		</h:link>
 	</div>
+	<div style="float: right; margin-right: 110px">
+				<span style="float: left; height: 30px; line-height: 30px; margin-right: 60px">
+				Olá usuário!
+				</span>
+				
+				<h:form style="display: inline-block">
+					<p:menubar styleClass="menu-sistema">
+						<p:submenu label="Cadastros">
+							<p:menuitem value="Clientes" />
+							<p:menuitem value="Usuários" />
+							<p:separator/>
+							<p:menuitem value="Categorias" />
+							<p:menuitem value="Produtos" outcome="/produtos/pesquisaproduto.xhtml" />
+						</p:submenu>
+						<p:submenu label="Pedidos">
+							<p:menuitem value="Novo pedido" outcome="/pedidos/cadastropedido.xhtml" />
+							<p:menuitem value="Pesquisa" outcome="/pedidos/pesquisapedido.xhtml" />
+						</p:submenu>
+						<p:menuitem value="Sair" />
+					</p:menubar>
+				</h:form>
+			</div>
+			<div style="clear: both"></div>
 	</header>
 	<div id="conteudo">
 		<ui:insert name="corpo" />
 	</div>
 	<p:separator style="margin-top:20px" />
-	<footer>
-	Sistema desenvolvido pela TriploWeb - 
-	<a href="http://bit.ly/Y8saFl" target="_blank">www.triploweb.com.br</a>
-	</footer>
+	<footer> Sistema desenvolvido pela TriploWeb - <a
+		href="http://bit.ly/Y8saFl" target="_blank">www.triploweb.com.br</a> </footer>
 
 	<script>
 		function configurarMoeda() {
